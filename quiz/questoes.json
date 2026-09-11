@@ -1,0 +1,161 @@
+[
+  {
+    "pergunta": "Qual componente é responsável por realizar os principais cálculos do computador?",
+    "alternativas": [
+      "Monitor",
+      "Teclado",
+      "Gabinete",
+      "Mouse",
+      "Processador (CPU)"
+    ],
+    "correta": 4
+  },
+  {
+    "pergunta": "Qual componente é usado para armazenar arquivos mesmo quando o computador está desligado?",
+    "alternativas": ["SSD", "RAM", "Processador", "Placa de vídeo", "Cooler"],
+    "correta": 0
+  },
+  {
+    "pergunta": "O que significa a sigla IA?",
+    "alternativas": [
+      "Internet Avançada",
+      "Instalação Automática",
+      "Interface Avançada",
+      "Inteligência Artificial",
+      "Informação Artificial"
+    ],
+    "correta": 3
+  },
+  {
+    "pergunta": "Qual destes é um exemplo de IA?",
+    "alternativas": [
+      "Um assistente virtual que entende perguntas",
+      "Uma calculadora simples",
+      "Um pendrive vazio",
+      "Um teclado mecânico",
+      "Um cabo HDMI"
+    ],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual é a principal função da memória RAM?",
+    "alternativas": [
+      "Armazenar arquivos permanentemente",
+      "Armazenar temporariamente dados usados pelos programas",
+      "Processar gráficos",
+      "Resfriar o processador",
+      "Fornecer energia ao computador"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "Qual componente é mais relacionado ao processamento de gráficos e jogos?",
+    "alternativas": [
+      "HD",
+      "Fonte de alimentação",
+      "GPU",
+      "RAM",
+      "Placa de rede"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "Qual é a função de um algoritmo em um sistema de IA?",
+    "alternativas": [
+      "Armazenar permanentemente os dados",
+      "Controlar os componentes físicos do PC",
+      "Transformar automaticamente tudo em resposta correta",
+      "Definir instruções e etapas para realizar uma tarefa",
+      "Substituir o processador"
+    ],
+    "correta": 3
+  },
+  {
+    "pergunta": "Para que servem os dados no treinamento de uma Inteligência Artificial?",
+    "alternativas": [
+      "Aumentar fisicamente a memória do PC",
+      "Resfriar o processador",
+      "Ensinar o modelo a identificar padrões e realizar tarefas",
+      "Substituir a placa-mãe",
+      "Limpar o disco rígido"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "Qual é a principal diferença entre CPU e GPU?",
+    "alternativas": [
+      "A CPU armazena arquivos e a GPU armazena programas",
+      "A GPU substitui completamente a memória RAM",
+      "A CPU é de uso geral, enquanto a GPU é eficiente em operações paralelas",
+      "A CPU é para notebooks e a GPU para servidores",
+      "Não existe diferença entre elas"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "Em Inteligência Artificial, o que pode acontecer quando um modelo apresenta overfitting?",
+    "alternativas": [
+      "O modelo aprende bem os dados de treino, mas falha com dados novos",
+      "O modelo não consegue aprender nenhum dado",
+      "O computador fica fisicamente mais lento",
+      "A memória RAM é apagada",
+      "O processador deixa de funcionar"
+    ],
+    "correta": 0
+  },
+  {
+    "pergunta": "O que é Machine Learning (Aprendizado de Máquina)?",
+    "alternativas": [
+      "Uma marca de processadores de alto desempenho",
+      "Um subcampo da IA focado em sistemas que aprendem com dados",
+      "Um tipo de memória usada em servidores",
+      "Um vírus que ataca algoritmos",
+      "A placa-mãe de um robô"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "Qual é a principal função da Placa-mãe?",
+    "alternativas": [
+      "Resfriar o computador",
+      "Conectar e permitir a comunicação entre todos os componentes",
+      "Fornecer energia diretamente da tomada",
+      "Aumentar os gráficos dos jogos",
+      "Digitar textos automaticamente"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "Qual a principal diferença entre HDD e SSD?",
+    "alternativas": [
+      "O SSD usa partes móveis e o HDD usa memória flash",
+      "O HDD é mais rápido que o SSD",
+      "O SSD usa memória flash (mais rápido), o HDD usa discos magnéticos",
+      "O HDD armazena jogos e o SSD armazena textos",
+      "Nenhuma, são o mesmo componente"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "Para que serve a fonte de alimentação em um computador?",
+    "alternativas": [
+      "Processar gráficos pesados",
+      "Converter a energia da tomada e distribuí-la aos componentes",
+      "Ler CDs e DVDs",
+      "Aumentar o volume do som",
+      "Executar a Inteligência Artificial"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "O que o famoso Teste de Turing busca avaliar?",
+    "alternativas": [
+      "A velocidade máxima de um processador",
+      "A capacidade de uma máquina exibir comportamento inteligente equivalente ao humano",
+      "A durabilidade de um disco rígido",
+      "O consumo de energia de uma Placa de Vídeo",
+      "A qualidade de uma conexão Wi-Fi"
+    ],
+    "correta": 1
+  }
+]

@@ -1,0 +1,98 @@
+body {
+  background-image: url('https://i.pinimg.com/1200x/c2/0a/f5/c20af5bea5e33c648cd5e5dd151d0e8d.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(0, 0, 0);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.quiz-container {
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+/* Fundo semi-transparente para o título ficar legível no background */
+.header-bg {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.card {
+  background-color: green;
+  border: 1px solid greenyellow;
+}
+
+.titulo {
+  color: green;
+  font-weight: bold;
+}
+
+.titulo-resultado {
+  color: greenyellow;
+  font-weight: bold;
+}
+
+.card h4 {
+  color: rgb(249, 246, 246);
+  margin-bottom: 20px;
+}
+
+/* Estilos para transformar os input[type="radio"] em botões visuais */
+.alternativa-label {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.alternativa-label input[type='radio'] {
+  display: none; /* Esconde a bolinha nativa do radio */
+}
+
+.alternativa-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #f8f9fa; /* Simulando o btn-outline-light */
+  color: #f8f9fa;
+  border-radius: 6px;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+  font-family: Arial, Helvetica, sans-serif; /* Fonte legível nas respostas */
+}
+
+/* Efeito ao passar o mouse */
+.alternativa-label:hover .alternativa-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estado selecionado antes de enviar */
+.alternativa-label input[type='radio']:checked + .alternativa-btn {
+  background-color: #f8f9fa;
+  color: green;
+  font-weight: bold;
+}
+
+/* Classes injetadas pelo JS no momento de correção */
+.alternativa-btn.correct {
+  background-color: #198754 !important; /* Verde (btn-success) */
+  color: white !important;
+  border-color: #198754 !important;
+}
+
+.alternativa-btn.incorrect {
+  background-color: #dc3545 !important; /* Vermelho (btn-danger) */
+  color: white !important;
+  border-color: #dc3545 !important;
+}
+
+#resultado {
+  display: none;
+}
+
+#pontuacaoFinal {
+  color: white;
+}
