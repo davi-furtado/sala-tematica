@@ -157,5 +157,109 @@
       "A qualidade de uma conexão Wi-Fi"
     ],
     "correta": 1
+  },
+  {
+    "pergunta": "O que são Redes Neurais Artificiais no contexto de Inteligência Artificial?",
+    "alternativas": [
+      "Cabos de fibra óptica que conectam supercomputadores",
+      "Modelos computacionais inspirados na estrutura do cérebro humano",
+      "Sistemas de segurança para proteger o Wi-Fi",
+      "Dispositivos físicos que substituem a memória RAM",
+      "Programas para reparar placas-mãe com defeito"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "Qual é a função do cooler (ou sistema de refrigeração) em um computador?",
+    "alternativas": [
+      "Dissipar o calor dos componentes para evitar o superaquecimento",
+      "Aumentar a velocidade da conexão com a internet",
+      "Acelerar o carregamento de arquivos no SSD",
+      "Gerar energia elétrica extra para a GPU",
+      "Limpar a memória RAM automaticamente"
+    ],
+    "correta": 0
+  },
+  {
+    "pergunta": "O que é Processamento de Linguagem Natural (PLN/NLP)?",
+    "alternativas": [
+      "Um método de limpeza para componentes de computador",
+      "A linguagem usada por programadores para criar a BIOS",
+      "Uma área da IA focada na interação entre computadores e linguagem humana",
+      "O som produzido pelos coolers ao girar em alta velocidade",
+      "Uma técnica para acelerar a leitura de discos rígidos"
+    ],
+    "correta": 2
+  },
+  {
+    "pergunta": "O que é a BIOS/UEFI de um computador?",
+    "alternativas": [
+      "O programa usado para jogar online",
+      "O primeiro software executado ao ligar o PC para inicializar o hardware",
+      "O navegador padrão de internet",
+      "Um antivírus integrado à fonte de alimentação",
+      "O driver responsável apenas pelo som do sistema"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "Em aprendizado de máquina, qual a principal diferença entre aprendizado supervisionado e não supervisionado?",
+    "alternativas": [
+      "O supervisionado utiliza dados rotulados; o não supervisionado encontra padrões sem rótulos",
+      "O não supervisionado não necessita de um computador para ser executado",
+      "O supervisionado é exclusivo para robôs físicos",
+      "O não supervisionado é usado apenas em placas de vídeo antigas",
+      "Ambos funcionam de maneira idêntica, mudando apenas o nome"
+    ],
+    "correta": 0
+  },
+  {
+    "pergunta": "Qual é o papel da memória Cache no processador?",
+    "alternativas": [
+      "Armazenar todas as fotos e vídeos permanentemente",
+      "Fornecer acesso ultrarrápido a dados frequentemente usados pela CPU",
+      "Substituir o uso de placas de vídeo dedicadas",
+      "Garantir conexão contínua com a internet",
+      "Controlar a velocidade das ventoinhas do PC"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "O que é um 'Prompt' no contexto de Modelos de Linguagem (LLMs) como o ChatGPT?",
+    "alternativas": [
+      "Uma peça física instalada no processador",
+      "A entrada de texto ou instrução dada ao modelo para obter uma resposta",
+      "O tempo que o computador leva para reiniciar",
+      "Um tipo de arquivo de imagem de alta definição",
+      "O erro emitido quando a placa de vídeo falha"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "Qual conector/porta é amplamente utilizado atualmente para transferir áudio e vídeo digitais em alta definição?",
+    "alternativas": ["VGA", "PS/2", "HDMI", "SATA", "Molex"],
+    "correta": 2
+  },
+  {
+    "pergunta": "O que é um 'Visão Computacional' (Computer Vision)?",
+    "alternativas": [
+      "Óculos especiais para reparar placas de circuito",
+      "Campo da IA que permite às máquinas interpretar e entender o mundo visual",
+      "Um tipo de monitor com alta taxa de atualização",
+      "A capacidade do sistema operacional de mudar a cor da tela",
+      "Um teste para verificar se o monitor está com pixels queimados"
+    ],
+    "correta": 1
+  },
+  {
+    "pergunta": "O que é Deep Learning (Aprendizado Profundo)?",
+    "alternativas": [
+      "Subcampo do aprendizado de máquina baseado em redes neurais com muitas camadas",
+      "O ato de armazenar dados no fundo do disco rígido",
+      "Um programa para formatar memórias RAM com defeito",
+      "Um método de refrigeração líquida para servidores de alta capacidade",
+      "Um algoritmo usado exclusivamente para calcular planilhas de texto"
+    ],
+    "correta": 0
   }
 ]

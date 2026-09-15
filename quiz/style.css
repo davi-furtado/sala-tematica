@@ -96,3 +96,9 @@ body {
 #pontuacaoFinal {
   color: white;
 }
+
+@media (max-width: 768px) {
+  body {
+    background-image: none;
+  }
+}
