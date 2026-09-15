@@ -2,7 +2,7 @@ body {
   background-image: url('https://i.pinimg.com/1200x/c2/0a/f5/c20af5bea5e33c648cd5e5dd151d0e8d.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   color: rgb(0, 0, 0);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
