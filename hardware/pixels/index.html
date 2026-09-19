@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixels de verdade — Sala Temática IFF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-dot"></span>
+    <h1>Uma foto também é só uma grade de <span class="hl">números</span></h1>
+  </div>
+  <p class="subtitle">Toda imagem digital é uma grade de blocos (pixels), cada um com seu próprio RGB. Veja sua foto virar números.</p>
+</header>
+
+<div id="status-banner" class="status-banner" hidden></div>
+
+<main class="stage">
+
+  <!-- TELA INICIAL -->
+  <section class="screen" id="screen-start">
+    <div class="start-buttons">
+      <button id="btn-camera" class="btn-choice" type="button">
+        <span class="btn-choice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+            <circle cx="12" cy="13" r="4"/>
+          </svg>
+        </span>
+        <span class="btn-choice-text">Ativar câmera</span>
+      </button>
+      <button id="btn-example" class="btn-choice btn-choice-alt" type="button">
+        <span class="btn-choice-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+        </span>
+        <span class="btn-choice-text">Usar foto de exemplo</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- CÂMERA AO VIVO -->
+  <section class="screen" id="screen-camera" hidden>
+    <p class="privacy-note">
+      <svg class="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+      Sua foto fica só neste computador — não é enviada nem salva em lugar nenhum.
+    </p>
+
+    <div class="camera-wrap">
+      <video id="video" autoplay playsinline muted></video>
+    </div>
+
+    <div class="camera-actions">
+      <button id="btn-capture" class="btn-primary" type="button">Tirar foto</button>
+      <button id="btn-use-example-instead" class="btn-ghost" type="button">usar foto de exemplo</button>
+      <button id="btn-cancel-camera" class="btn-ghost" type="button">cancelar</button>
+    </div>
+  </section>
+
+  <!-- RESULTADO PIXELIZADO -->
+  <section class="screen" id="screen-result" hidden>
+    <p id="privacy-note-result" class="privacy-note" hidden>
+      <svg class="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+      Sua foto fica só neste computador — não é enviada nem salva em lugar nenhum.
+    </p>
+
+    <div class="result-layout">
+      <div class="canvas-column">
+        <canvas id="canvas-pixel" width="480" height="360"></canvas>
+
+        <div class="slider-row">
+          <span class="slider-label">bem pixelizada</span>
+          <input type="range" id="slider-detail" min="4" max="96" value="20" aria-label="Nível de detalhe">
+          <span class="slider-label">quase nítida</span>
+        </div>
+        <p class="resolution-readout">resolução aproximada: <b id="resolution-value">20 x 15</b> pixels</p>
+      </div>
+
+      <aside class="info-panel">
+        <h2>Cor do bloco</h2>
+        <div id="swatch" class="swatch"></div>
+
+        <div class="channel-rows">
+          <div class="channel-row channel-r">
+            <span class="channel-label">R</span>
+            <span id="info-r-dec" class="channel-dec">—</span>
+            <span id="info-r-bin" class="channel-bin">--------</span>
+          </div>
+          <div class="channel-row channel-g">
+            <span class="channel-label">G</span>
+            <span id="info-g-dec" class="channel-dec">—</span>
+            <span id="info-g-bin" class="channel-bin">--------</span>
+          </div>
+          <div class="channel-row channel-b">
+            <span class="channel-label">B</span>
+            <span id="info-b-dec" class="channel-dec">—</span>
+            <span id="info-b-bin" class="channel-bin">--------</span>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="info-label">HEX</span>
+          <span id="info-hex" class="info-value">—</span>
+        </div>
+        <p id="info-hint" class="info-hint">passe o mouse (ou o dedo) sobre a imagem</p>
+      </aside>
+    </div>
+
+    <div class="result-actions">
+      <button id="btn-retake" class="btn-primary" type="button">Tirar outra foto</button>
+      <button id="btn-toggle-source" class="btn-ghost" type="button">Trocar pra foto de exemplo</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>IFF Bom Jesus do Itabapoana · Curso Técnico em Informática</span>
+</footer>
+
+<canvas id="canvas-source" hidden></canvas>
+<canvas id="canvas-tiny" hidden></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
