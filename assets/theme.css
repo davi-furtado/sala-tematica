@@ -1,0 +1,29 @@
+/*
+  Tema compartilhado — Sala Temática de TI (IFF Bom Jesus do Itabapoana)
+  Importe com: <link rel="stylesheet" href="/assets/theme.css">
+  (ajuste o caminho relativo conforme a profundidade da página)
+*/
+
+:root {
+  --bg: #0d0f10;
+  --panel: #17191b;
+  --panel-border: #26292b;
+  --text: #e9eaea;
+  --text-dim: #9a9d9f;
+  --red: #C8191E;
+  --red-glow: rgba(200, 25, 30, 0.55);
+  --green: #32A041;
+  --font-family: 'Poppins', -apple-system, 'Segoe UI', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-family);
+}
