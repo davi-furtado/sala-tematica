@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corrida de Ordenação — Sala Temática IFF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-dot"></span>
+    <h1>Corrida de <span class="hl">ordenação</span></h1>
+  </div>
+  <p class="subtitle">Dois algoritmos, o mesmo array embaralhado. Veja quem chega primeiro.</p>
+</header>
+
+<div class="controls-bar">
+  <button id="btn-shuffle" class="btn-primary" type="button">Embaralhar</button>
+  <button id="btn-start" class="btn-primary btn-start" type="button">Iniciar corrida</button>
+
+  <div class="speed-control">
+    <span class="speed-label">bem devagar</span>
+    <input type="range" id="slider-speed" min="0" max="100" value="60" aria-label="Velocidade da animação">
+    <span class="speed-label">bem rápido</span>
+  </div>
+</div>
+
+<main class="race-layout">
+
+  <section class="panel" id="panel-a" data-panel="a">
+    <div class="panel-head">
+      <select id="select-a" class="algo-select" aria-label="Algoritmo do painel A">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Seleção</option>
+        <option value="insertion">Inserção</option>
+        <option value="quick">Quick Sort</option>
+      </select>
+      <p id="desc-a" class="algo-desc"></p>
+    </div>
+
+    <div class="panel-stats">
+      <div class="stat">
+        <span class="stat-label">comparações</span>
+        <span id="comp-a" class="stat-value">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">trocas</span>
+        <span id="swap-a" class="stat-value">0</span>
+      </div>
+    </div>
+
+    <div class="bars-wrap">
+      <div id="bars-a" class="bars"></div>
+      <div id="badge-a" class="finish-badge" hidden>
+        <span class="badge-trophy" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4z"/>
+            <path d="M17 5h2a2 2 0 0 1 2 2 4 4 0 0 1-4 4M7 5H5a2 2 0 0 0-2 2 4 4 0 0 0 4 4"/>
+          </svg>
+        </span>
+        <span class="finish-title">Chegou!</span>
+        <span class="finish-stats"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-b" data-panel="b">
+    <div class="panel-head">
+      <select id="select-b" class="algo-select" aria-label="Algoritmo do painel B">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Seleção</option>
+        <option value="insertion">Inserção</option>
+        <option value="quick" selected>Quick Sort</option>
+      </select>
+      <p id="desc-b" class="algo-desc"></p>
+    </div>
+
+    <div class="panel-stats">
+      <div class="stat">
+        <span class="stat-label">comparações</span>
+        <span id="comp-b" class="stat-value">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">trocas</span>
+        <span id="swap-b" class="stat-value">0</span>
+      </div>
+    </div>
+
+    <div class="bars-wrap">
+      <div id="bars-b" class="bars"></div>
+      <div id="badge-b" class="finish-badge" hidden>
+        <span class="badge-trophy" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4z"/>
+            <path d="M17 5h2a2 2 0 0 1 2 2 4 4 0 0 1-4 4M7 5H5a2 2 0 0 0-2 2 4 4 0 0 0 4 4"/>
+          </svg>
+        </span>
+        <span class="finish-title">Chegou!</span>
+        <span class="finish-stats"></span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>IFF Bom Jesus do Itabapoana · Curso Técnico em Informática</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
