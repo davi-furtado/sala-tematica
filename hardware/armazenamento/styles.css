@@ -1,0 +1,352 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 22px 40px 16px;
+}
+
+/* ---------- header ---------- */
+
+.topbar {
+  margin-bottom: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--red);
+  box-shadow: 0 0 12px 3px var(--red-glow);
+  flex-shrink: 0;
+}
+
+h1 {
+  font-size: clamp(21px, 2.3vw, 29px);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+h1 .hl { color: var(--red); }
+
+.subtitle {
+  margin: 6px 0 0 28px;
+  color: var(--text-dim);
+  font-size: clamp(13px, 1.1vw, 15px);
+  font-weight: 300;
+  max-width: 72ch;
+}
+
+.section-label {
+  display: block;
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+/* ---------- seletor de mídia ---------- */
+
+.media-section {
+  margin-bottom: 16px;
+}
+
+.media-cards {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 108px;
+  padding: 14px 10px 12px;
+  background: var(--panel);
+  border: 2px solid var(--panel-border);
+  border-radius: 16px;
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color .15s, background .15s, transform .1s;
+}
+
+.media-card:hover {
+  border-color: #3a3d3f;
+}
+
+.media-card:active {
+  transform: scale(0.97);
+}
+
+.media-card.active {
+  border-color: var(--red);
+  background: #1c1315;
+}
+
+.media-card-icon {
+  width: 42px;
+  height: 42px;
+  color: var(--text-dim);
+}
+
+.media-card.active .media-card-icon {
+  color: var(--red);
+}
+
+.media-card-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.media-card-infinity {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text-dim);
+  line-height: 1;
+}
+
+.media-card.active .media-card-infinity {
+  color: var(--red);
+}
+
+.media-card-label {
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.media-card-capacity {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--green);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- seletor de tipo de conteúdo ---------- */
+
+.content-section {
+  margin-bottom: 16px;
+}
+
+.content-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.content-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dim);
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 999px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: border-color .15s, color .15s, background .15s;
+}
+
+.content-tab svg {
+  width: 18px;
+  height: 18px;
+}
+
+.content-tab:hover {
+  color: var(--text);
+  border-color: #3a3d3f;
+}
+
+.content-tab.active {
+  color: var(--text);
+  border-color: var(--green);
+  background: #12201a;
+}
+
+/* ---------- layout principal ---------- */
+
+.main-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 20px;
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  .main-layout { grid-template-columns: 1fr; }
+}
+
+/* ---------- container que enche ---------- */
+
+.fill-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  min-height: 0;
+}
+
+.fill-container-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  flex: 1;
+  min-height: 220px;
+  max-height: 42vh;
+}
+
+.fill-container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 6px;
+  padding: 16px;
+  background: #0f1112;
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.fill-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--green);
+  opacity: 0;
+  animation: icon-in .25s ease-out both;
+}
+
+.fill-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes icon-in {
+  from { opacity: 0; transform: scale(0.3); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.fill-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(13, 15, 16, 0.82);
+  border-radius: 18px;
+  font-size: clamp(20px, 2.6vw, 30px);
+  font-weight: 700;
+  color: var(--text);
+  pointer-events: none;
+}
+
+.fill-overlay[hidden] {
+  display: none;
+}
+
+.fill-sentence {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 500;
+  color: var(--text);
+  max-width: 80ch;
+}
+
+/* ---------- painel de escala de dados ---------- */
+
+.scale-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 18px;
+  padding: 18px;
+  height: fit-content;
+}
+
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.ref-table thead th {
+  text-align: left;
+  padding: 6px 8px;
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.ref-table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid #1d2022;
+}
+
+.ref-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ref-table tbody tr:hover {
+  background: #1a1c1e;
+}
+
+.ref-table .unit-cell {
+  font-weight: 600;
+  color: var(--green);
+  white-space: nowrap;
+}
+
+.ref-table .equivalent-cell {
+  color: var(--text-dim);
+}
+
+/* ---------- fato extra fixo ---------- */
+
+.fun-fact {
+  margin: 16px auto 0;
+  padding: 12px 22px;
+  max-width: fit-content;
+  background: #12201a;
+  border: 1px solid var(--green);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 13.5px;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  margin-top: 16px;
+  text-align: center;
+  color: #4d4f51;
+  font-size: 11px;
+  font-weight: 300;
+}

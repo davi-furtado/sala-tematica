@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evolução do armazenamento — Sala Temática IFF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-dot"></span>
+    <h1>Quanto cabe numa <span class="hl">mídia</span>?</h1>
+  </div>
+  <p class="subtitle">Escolha uma mídia de armazenamento e um tipo de arquivo, e veja quantos cabem de verdade.</p>
+</header>
+
+<section class="media-section">
+  <span class="section-label">Escolha a mídia</span>
+  <div id="media-cards" class="media-cards" role="listbox" aria-label="Mídia de armazenamento"></div>
+</section>
+
+<section class="content-section">
+  <span class="section-label">Escolha o tipo de conteúdo</span>
+  <div id="content-tabs" class="content-tabs" role="tablist" aria-label="Tipo de conteúdo"></div>
+</section>
+
+<main class="main-layout">
+  <section class="fill-section">
+    <div class="fill-container-wrap">
+      <div id="fill-container" class="fill-container"></div>
+      <div id="fill-overlay" class="fill-overlay" hidden></div>
+    </div>
+    <p id="fill-sentence" class="fill-sentence"></p>
+  </section>
+
+  <aside class="scale-panel">
+    <span class="section-label">Escala de dados</span>
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Unidade</th>
+          <th>Equivale a</th>
+        </tr>
+      </thead>
+      <tbody id="scale-table-body"></tbody>
+    </table>
+  </aside>
+</main>
+
+<p id="fun-fact" class="fun-fact"></p>
+
+<footer class="footer">
+  <span>IFF Bom Jesus do Itabapoana · Curso Técnico em Informática</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
