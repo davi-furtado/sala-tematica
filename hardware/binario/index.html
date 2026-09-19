@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binário na prática — Sala Temática IFF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-dot"></span>
+    <h1>Como o computador enxerga um <span class="hl">texto</span></h1>
+  </div>
+  <p class="subtitle">Cada letra que você digita vira uma sequência de 0s e 1s. Mexa aqui do seu jeito.</p>
+</header>
+
+<nav class="tabs" role="tablist" aria-label="Etapas">
+  <button
+    class="tab active"
+    id="tab-bits"
+    type="button"
+    role="tab"
+    aria-selected="true"
+    aria-controls="panel-bits"
+  ><span class="step">1</span> Brinque com os bits</button>
+  <button
+    class="tab"
+    id="tab-nome"
+    type="button"
+    role="tab"
+    aria-selected="false"
+    aria-controls="panel-nome"
+    tabindex="-1"
+  ><span class="step">2</span> Digite seu nome</button>
+  <button
+    class="tab"
+    id="tab-tabela"
+    type="button"
+    role="tab"
+    aria-selected="false"
+    aria-controls="panel-tabela"
+    tabindex="-1"
+  ><span class="step">3</span> Tabela de referência</button>
+</nav>
+
+<main class="layout">
+
+  <!-- PARTE 1 -->
+  <section class="panel" id="panel-bits" role="tabpanel" aria-labelledby="tab-bits">
+    <div class="panel-head">
+      <h2>Brinque com os bits</h2>
+    </div>
+
+    <div class="bits-area">
+      <div id="switches" class="switches"></div>
+
+      <div class="bits-readout">
+        <div class="readout-row">
+          <span class="readout-label">decimal</span>
+          <span id="readout-dec" class="readout-value">0</span>
+        </div>
+        <div class="readout-row">
+          <span class="readout-label">caractere</span>
+          <span id="readout-char" class="readout-value readout-char">não imprimível</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTE 2 -->
+  <section class="panel" id="panel-nome" role="tabpanel" aria-labelledby="tab-nome" hidden>
+    <div class="panel-head">
+      <h2>Digite seu nome</h2>
+      <button id="btn-reset" class="btn-ghost" type="button">reiniciar</button>
+    </div>
+
+    <input
+      id="input-nome"
+      type="text"
+      placeholder="Digite seu nome aqui"
+      autocomplete="off"
+      spellcheck="false"
+      maxlength="24"
+    >
+
+    <div id="linhas" class="linhas"></div>
+  </section>
+
+  <!-- PARTE 3 -->
+  <section class="panel" id="panel-tabela" role="tabpanel" aria-labelledby="tab-tabela" hidden>
+    <div class="panel-head">
+      <h2>Tabela de referência (ASCII / UTF-8)</h2>
+    </div>
+
+    <div class="tabela-wrap">
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th>Caractere</th>
+            <th>Decimal</th>
+            <th>Binário</th>
+            <th>LEDs</th>
+          </tr>
+        </thead>
+        <tbody id="ref-table-body"></tbody>
+      </table>
+    </div>
+
+    <p class="table-note">Esta tabela mostra os caracteres ASCII, que usam só 1 byte. Acentos como <b>é</b>, <b>ç</b> e <b>ã</b> usam 2 bytes em UTF-8 — digite um na aba 2 pra ver.</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>IFF Bom Jesus do Itabapoana · Curso Técnico em Informática</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
