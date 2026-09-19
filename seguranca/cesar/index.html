@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cifra de César — Sala Temática IFF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-dot"></span>
+    <h1>Cifra de <span class="hl">César</span></h1>
+  </div>
+  <p class="subtitle">Gire a roda pra deslocar o alfabeto — uma das formas mais antigas de criptografia, na mão.</p>
+</header>
+
+<main class="content-layout">
+
+  <section class="wheel-section">
+    <div class="wheel-wrap">
+      <div class="wheel-marker" aria-hidden="true"></div>
+      <div id="wheel" class="wheel">
+        <div id="ring-outer" class="ring ring-outer"></div>
+        <div id="ring-inner" class="ring ring-inner"></div>
+        <div id="wheel-center" class="wheel-center">
+          <span class="wheel-center-label">deslocamento</span>
+          <span id="wheel-center-value" class="wheel-center-value">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shift-control">
+      <span class="shift-control-label">Deslocamento (0–25)</span>
+      <div class="shift-stepper">
+        <button id="btn-shift-down" class="shift-btn" type="button" aria-label="Diminuir deslocamento">−</button>
+        <span id="shift-value" class="shift-value">0</span>
+        <button id="btn-shift-up" class="shift-btn" type="button" aria-label="Aumentar deslocamento">+</button>
+      </div>
+      <p class="shift-hint">Arraste a roda com o mouse (ou o dedo) ou use as setinhas.</p>
+    </div>
+  </section>
+
+  <section class="mode-section">
+    <nav class="tabs" role="tablist" aria-label="Modo">
+      <button class="tab active" id="tab-cifrar" type="button" role="tab" aria-selected="true" aria-controls="panel-cifrar">Cifrar</button>
+      <button class="tab" id="tab-decifrar" type="button" role="tab" aria-selected="false" aria-controls="panel-decifrar" tabindex="-1">Decifrar — modo desafio</button>
+    </nav>
+
+    <section class="panel" id="panel-cifrar" role="tabpanel" aria-labelledby="tab-cifrar">
+      <label class="field-label" for="input-plain">Mensagem normal</label>
+      <textarea id="input-plain" class="text-field" rows="3" placeholder="Digite uma mensagem aqui..." spellcheck="false"></textarea>
+
+      <div class="result-block">
+        <div class="result-head">
+          <span class="field-label">Texto cifrado</span>
+          <button id="btn-copy" class="btn-ghost" type="button">Copiar</button>
+        </div>
+        <div id="output-cipher" class="result-text"></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-decifrar" role="tabpanel" aria-labelledby="tab-decifrar" hidden>
+      <label class="field-label" for="input-cipher">Mensagem cifrada (cole o desafio aqui)</label>
+      <textarea id="input-cipher" class="text-field" rows="3" placeholder="Cole ou digite a mensagem cifrada..." spellcheck="false"></textarea>
+
+      <div class="result-block">
+        <span class="field-label">Tentativa de decifração — gire a roda até fazer sentido</span>
+        <div id="output-decipher" class="result-text"></div>
+      </div>
+
+      <button id="btn-show-all" class="btn-ghost" type="button">Mostrar as 26 possibilidades</button>
+
+      <div id="all-shifts-wrap" class="all-shifts-wrap" hidden>
+        <table class="ref-table">
+          <thead>
+            <tr>
+              <th>Deslocamento</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
+          <tbody id="all-shifts-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p id="note-nonletter" class="note-hint" hidden>Acentos e pontuação não são cifrados, ficam como estão.</p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>IFF Bom Jesus do Itabapoana · Curso Técnico em Informática</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

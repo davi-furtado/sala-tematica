@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quanto tempo pra quebrar sua senha? — Sala Temática IFF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/theme.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-dot"></span>
+    <h1>Quanto tempo leva pra quebrar sua <span class="hl">senha</span>?</h1>
+  </div>
+  <p class="subtitle">Digite uma senha e veja um ataque de força bruta (dramatizado) ficar mais lento conforme ela fica mais forte.</p>
+</header>
+
+<p class="test-warning">Digite uma senha de teste — não use uma senha que você realmente usa em algum lugar.</p>
+
+<div class="input-row">
+  <input
+    id="input-senha"
+    class="senha-input"
+    type="text"
+    placeholder="Digite uma senha aqui"
+    autocomplete="off"
+    spellcheck="false"
+  >
+</div>
+
+<div class="example-row">
+  <button id="btn-fraca" class="btn-ghost" type="button">Testar senha fraca</button>
+  <button id="btn-forte" class="btn-ghost" type="button">Testar senha forte</button>
+  <button id="btn-limpar" class="btn-ghost" type="button">Limpar</button>
+</div>
+
+<main class="content-layout">
+
+  <section class="side-panel">
+    <div class="strength-block">
+      <div class="strength-head">
+        <span class="strength-label-title">Força da senha</span>
+        <span id="strength-label" class="strength-label-value">—</span>
+      </div>
+      <div class="strength-track">
+        <div id="strength-fill" class="strength-fill"></div>
+      </div>
+    </div>
+
+    <div id="common-warning" class="common-warning" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+      <span>Essa senha está entre as mais comuns do mundo — critérios técnicos à parte, seria a primeira tentativa de qualquer ataque real, vinda de listas de senhas vazadas.</span>
+    </div>
+
+    <ul class="checklist" id="checklist">
+      <li class="check-item" data-check="length">
+        <span class="check-dot"></span>
+        <span class="check-text">pelo menos 8 caracteres</span>
+      </li>
+      <li class="check-item" data-check="upper">
+        <span class="check-dot"></span>
+        <span class="check-text">letra maiúscula</span>
+      </li>
+      <li class="check-item" data-check="lower">
+        <span class="check-dot"></span>
+        <span class="check-text">letra minúscula</span>
+      </li>
+      <li class="check-item" data-check="digit">
+        <span class="check-dot"></span>
+        <span class="check-text">número</span>
+      </li>
+      <li class="check-item" data-check="symbol">
+        <span class="check-dot"></span>
+        <span class="check-text">símbolo</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="terminal-panel">
+    <div class="terminal-head">
+      <span class="terminal-dot"></span>
+      <span class="terminal-title">tentativas de força bruta (dramatização)</span>
+    </div>
+    <div id="terminal" class="terminal" aria-hidden="true"></div>
+
+    <div class="crack-time">
+      <span class="crack-time-label">tempo estimado para quebrar por força bruta</span>
+      <span id="crack-time-value" class="crack-time-value">digite uma senha</span>
+    </div>
+  </section>
+
+  <section class="common-table-panel">
+    <div class="panel-head">
+      <h2>Tabela de referência: senhas mais comuns</h2>
+    </div>
+    <p class="table-note">Estas são as senhas usadas na checagem acima — aparecem no topo de listas reais de vazamentos ano após ano, mesmo as que parecem "fortes".</p>
+
+    <div class="common-table-wrap">
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Senha</th>
+          </tr>
+        </thead>
+        <tbody id="common-table-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>IFF Bom Jesus do Itabapoana · Curso Técnico em Informática</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
